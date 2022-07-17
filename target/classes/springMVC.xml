@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--扫描组件-->
+    <context:component-scan base-package="com.shen.mvc.controller.controller"></context:component-scan>
+    <context:component-scan base-package="com.shen.mvc.controller.interceptors"></context:component-scan>
+    <context:component-scan base-package="com.shen.mvc.controller.Validator"></context:component-scan>
+    <context:component-scan base-package="com.shen.mvc.controller.config"></context:component-scan>
+<!--拦截器-->
+    <mvc:interceptors>
+
+            <mvc:interceptor>
+                <mvc:mapping path="/**"/>
+                <mvc:exclude-mapping path="/"/>
+                <mvc:exclude-mapping path="/favicon.ico"/>
+                <mvc:exclude-mapping path="/checkUser"/>
+                <mvc:exclude-mapping path="/langer"/>
+                <ref bean="loginInterceptor"></ref>
+            </mvc:interceptor>
+    </mvc:interceptors>
+    <mvc:default-servlet-handler />
+    <!--开启mvc注解驱动-->
+    <mvc:annotation-driven conversion-service="myConversionService" validator="userValidator" >
+        <mvc:message-converters>
+            <ref bean="stringHttpMessageConverter"/>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+    <!--配置视图控制器-->
+    <mvc:view-controller path="/" view-name="login"></mvc:view-controller>
+    <mvc:view-controller path="/login" view-name="login"></mvc:view-controller>
+    <mvc:view-controller path="/index" view-name="index"></mvc:view-controller>
+    <mvc:view-controller path="/Success" view-name="Success"></mvc:view-controller>
+    <mvc:view-controller path="/downandload" view-name="downandload"></mvc:view-controller>
+
+    <!--配置Thymeleaf视图解析器-->
+    <bean id="viewResolver" class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
+        <property name="order" value="1"/>
+        <property name="characterEncoding" value="UTF-8"/>
+        <property name="templateEngine">
+            <bean class="org.thymeleaf.spring5.SpringTemplateEngine">
+                <property name="templateResolver">
+                    <bean class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
+                        <!-- 视图前缀 -->
+                        <property name="prefix" value="/WEB-INF/templates/"/>
+                        <!-- 视图后缀 -->
+                        <property name="suffix" value=".html"/>
+                        <property name="templateMode" value="HTML5"/>
+                        <property name="characterEncoding" value="UTF-8" />
+                    </bean>
+                </property>
+            </bean>
+        </property>
+    </bean>
+<!--    配置格式化器-->
+    <bean id="myConversionService"
+          class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <bean class="com.shen.mvc.controller.Converter.OrderConverter">
+                    <property name="pattern" value="yyyy-MM-dd"></property>
+                </bean>
+            </list>
+        </property>
+    </bean>
+    <bean id="stringHttpMessageConverter" class="org.springframework.http.converter.StringHttpMessageConverter">
+        <constructor-arg value="UTF-8"/>
+    </bean>
+    <!--必须通过文件解析器的解析才能将文件转换为MultipartFile对象-->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    </bean>
+<!--    错误统一处理-->
+    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <prop key="java.lang.ArithmeticException">error</prop>
+            </props>
+        </property>
+    </bean>
+
+<!--    <bean class=""></bean>-->
+<!--    <ref bean="firstInterceptor"></ref>-->
+
+    <bean class="org.springframework.context.support.ResourceBundleMessageSource" id="messageSource">
+        <property name="basename">
+            <array>
+                <value>i18n</value>
+            </array>
+        </property>
+    </bean>
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+        <property name="defaultLocale" value="zh_CN"/>
+    </bean>
+    <mvc:interceptors>
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"></bean>
+    </mvc:interceptors>
+</beans>

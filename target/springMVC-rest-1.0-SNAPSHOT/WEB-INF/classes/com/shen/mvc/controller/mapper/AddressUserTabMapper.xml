@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shen.mvc.controller.mapper.AddressUserTabMapper">
+
+
+
+
+<!--    //添加地址中间表记录-->
+<!--    int insertAddressUser(@Param("addressId") int addressId,@Param("userId")int userId);-->
+    <insert id="insertAddressUser">
+        insert into addressusertab values(null,#{userId},#{addressId})
+    </insert>
+    <!--    //删除中间表地址记录-->
+    <!--    int deleteAddressUser(@Param("addressId") int addressId,@Param("userId")int userId);-->
+    <delete id="deleteAddressUser">
+        delete from addressusertab where userId=#{userId} and addressId = #{addressId}
+    </delete>
+</mapper>

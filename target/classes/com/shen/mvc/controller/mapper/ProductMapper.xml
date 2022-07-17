@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shen.mvc.controller.mapper.ProductMapper">
+<!--    //增删改查-->
+<!--    //增加产品-->
+<!--    int insertProduct(Product product);-->
+<!--    //根据Id查询商品-->
+<!--    int selectProductById(int id);-->
+
+<!--    //根据产品id修改产品-->
+<!--    int upDateProduct(int id);-->
+<!--    //根据id删除商品-->
+<!--    int deleteProduct(int id);-->
+
+    <!--    List<Product> selectAllProduct();-->
+    <select id="selectAllProduct" resultType="Product">
+        select productId,productName,productPrice,productImg,productText from product
+    </select>
+</mapper>

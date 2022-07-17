@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shen.mvc.controller.mapper.CondimentMapper">
+<!--    //增删改查-->
+<!--    //增加配料-->
+<!--    int insertCondiment(Condiment condiment);-->
+<!--    //根据Id查询配料-->
+<!--    int selectCondimentById(int id);-->
+<!--    //查询所有配料-->
+<!--    List<Condiment> selectAllCondiment();-->
+<!--    //根据产品id修改配料-->
+<!--    int upDateCondiment(int id);-->
+<!--    //根据id删除配料-->
+<!--    int deleteCondiment(int id);-->
+
+    <!--    //查询所有配料-->
+    <!--    List<Condiment> selectAllCondiment();-->
+    <select id="selectAllCondiment" resultType="Condiment">
+        SELECT condimentId, condimentName,condimentPrice FROM `condiment`
+    </select>
+</mapper>

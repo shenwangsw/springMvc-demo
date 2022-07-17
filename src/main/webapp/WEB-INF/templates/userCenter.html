@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+</head>
+<body>
+修改地址
+<div id="app">
+  <table>
+    <tr>
+      <th>序号</th>
+      <th>收件人</th>
+      <th>收件电话</th>
+      <th>收件地址详情</th>
+      <th colspan="">操作</th>
+    </tr>
+    <tr v-for="(item,index) in address.adressList">
+      <td>{{item.addressId}}</td>
+      <td>{{item.consignee}}</td>
+      <td>{{item.phone}}</td>
+      <td>{{item.addressText}}</td>
+      <td><button @click="deleteAddress(item.addressId)">删除</button></td>
+      <td><button @click="upDateAddress(item)">修改</button></td>
+    </tr>
+  </table>
+  <div>
+    序号:<input type="text" value="" v-model="addressObject.addressId">
+    收件人:<input type="text"value="" v-model="addressObject.consignee">
+    收件电话号:<input type="text" value="" v-model="addressObject.phone">
+    收件地址详情:<input type="text"  value="" v-model="addressObject.addressText">
+    <p><button @click="insertAddress">添加(添加不填序号)</button><button @click="sendUpdata">修改</button></p>
+  </div>
+</div>
+<script type="text/javascript" th:src="@{/static/js/Vue.js}"></script>
+<script type="text/javascript" th:src="@{/static/js/axios.js}"></script>
+<script>
+  new Vue({
+    el:"#app",
+    data(){
+      return{
+          address: {},
+          addressObject:{
+          userId:0,
+          addressId:"",
+          consignee:"",
+          phone:"",
+          addressText:''
+        },
+        }
+      },
+    methods:{
+      sendUpdata(){
+        let that = this
+        axios({
+          method: "get",
+          url: "upDateAddress",
+          params:that.addressObject
+        }).then((res)=>{
+          console.log(typeof res.data,res)
+          if(res.data==true){
+            alert("修改成功")
+            that.selectAllAddress();
+          }else {
+            alert("修改失败")
+          }
+        })
+      },
+      upDateAddress(address){
+        let that = this
+        that .addressObject.addressId=address.addressId
+        that.addressObject.consignee =address.consignee
+        that.addressObject.phone = address.phone
+        that.addressObject.addressText = address.addressText
+
+      },
+     insertAddress(){
+      let that = this
+      axios({
+        method: "get",
+        url: "insertAddress",
+        params:that.addressObject
+      }).then((res)=>{
+        console.log(typeof res.data,res)
+        if(res.data==true){
+      alert("添加成功")
+          that.selectAllAddress();
+        }else {
+          alert("添加失败")
+        }
+      })
+    },
+      selectAllAddress(){
+        let that = this
+        axios({
+          method: "get",
+          url: "selectAddressById",
+        }).then((res)=>{
+          if(res.data){
+            that.address = res.data
+            that.addressObject.userId= that.address.userId
+          }
+        })
+      },
+      deleteAddress(addressId){
+       let that = this
+        console.log(addressId)
+        axios({
+          method: "post",
+          url: "deleteAddressById",
+          params:{
+            addressId:addressId
+          }
+        }).then((res)=>{
+          if(res.data==true){
+          that.selectAllAddress();
+          alert("删除成功")
+          }
+          else{
+            alert("删除失败")
+          }
+        })
+  }
+    },
+    mounted() {
+      this.selectAllAddress();
+    },
+          }
+  )
+</script>
+</body>
+</html>

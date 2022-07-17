@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        .disply{
+            display: block;
+        }
+        .nodisply{
+            display: none;
+        }
+        .dilog{
+            width: 30%;
+            height: 60%;
+            border: 1px solid black;
+            position: absolute;
+            top: 15%;
+            left: 35%;
+            border-radius:10px ;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div><a th:href="@{/userCenter}">个人中心</a><br></div>
+    <div><a th:href="@{/orderCenter}">查看订单</a><br></div>
+    <div><a th:href="@{/downandload}">上传下载</a><br></div>
+<table>
+    <tr>
+        <th>产品序号</th>
+        <th>产品名称</th>
+        <th>产品价格</th>
+        <th>产品图片</th>
+        <th>产品介绍</th>
+        <th colspan="2">操作</th>
+        <th></th>
+    </tr>
+<tr v-for="item in productList">
+    <th>{{item.productId}}</th>
+    <th>{{item.productName}}</th>
+    <th>{{item.productPrice}}</th>
+    <th>{{item.productImg}}</th>
+    <th>{{item.productText}}</th>
+    <th><button @click="showPay(item.productId,item.productName,item.productPrice)">选择</button></th>
+    <th></th>
+</tr>
+</table>
+    <div class="dilog ">
+        <div>
+            <p>咖啡名称:{{dilogObj.productName}}</p>
+            <p>底价:{{dilogObj.productPrice}}</p>
+        </div>
+        <div>
+            <p>配料:</p>
+            <label v-for="item in comdimentList" @click="countPrice(item.condimentName,item.condimentPrice)">{{item.condimentName}}<input type="checkbox" name="condimentName" :value="item.condimentPrice" v-model="comdimenPrices"></label>
+            <p>总价：{{dilogObj.countPrice}}</p>
+                <table>
+                    <tr v-for="(item,index) in address.adressList">
+                        <td>{{index+1}}</td>
+                        <td>{{item.consignee}}</td>
+                        <td>{{item.phone}}</td>
+                        <td>{{item.addressText}}</td>
+                        <td><button @click="showAddress(item)">选择</button></td>
+                    </tr>
+                </table>
+            <span>下单地址:{{orderAddress}}}</span>
+            <button @click="insertOrder">下单</button>
+        </div>
+
+    </div>
+</div>
+<script type="text/javascript" th:src="@{/static/js/Vue.js}"></script>
+<script type="text/javascript" th:src="@{/static/js/axios.js}"></script>
+<script>
+    new Vue({
+        el:"#app",
+        data(){
+            return{
+                order:{
+                    orderId:'',
+                    orderPrice:'',
+                    orderTime:'',
+                    orderInfo:''
+                },
+                comdimentMapping:{
+                    mike:'牛奶',
+                    suger:'糖',
+                    chocolate:'巧克力'
+                },
+                orderAddress:"",
+                address:'',
+                productList:"",
+                comdimentList:"",
+                comdimentNameObj: {},
+                dilogObj:{
+                    productId:"",
+                    productName:"",
+                    productPrice:0,
+                    comdimentName:"",
+                    comdimentPrice:0,
+                    countPrice:Number,
+                },
+                comdimenPrices:[],
+            }
+        },
+        methods:{
+            showAddress(item){
+               this.orderAddress = `收件人：${item.consignee},收件人电话:${item.phone},收件人地址:${item.addressText}`
+            },
+            selectAllAddress(){
+                let that = this
+                axios({
+                    method: "get",
+                    url: "selectAddressById",
+                }).then((res)=>{
+                    if(res.data){
+                        that.address = res.data
+                        that.addressObject.userId= that.address.userId
+                    }
+                })
+            },
+            insertOrder(){
+                let that = this;
+                that.order.orderTime=new Date();
+                that.order.orderPrice=that.dilogObj.countPrice;
+                let comdimentStr = "+"
+                Object.keys(that.comdimentMapping).map(key=>{
+                    comdimentStr+=that.comdimentMapping[key]+'+'
+                })
+                that.order.orderInfo =that.dilogObj.productName+comdimentStr+that.orderAddress
+                axios({
+                    method: "get",
+                    url: "insertOrder",
+                    params:that.order
+                }).then((res)=>{
+                    console.log(typeof res.data,res)
+                    if(res.data==true){
+                        alert("下单成功")
+                        that.selectAllAddress();
+                    }else {
+                        alert("添加失败")
+                    }
+                })
+
+                console.log(that.order)
+            },
+            getAllProduct(){
+                let that = this
+                axios({
+                method:"get",
+                    url:"/getAllProduct"
+                }).then((res)=>{
+                    if (res.data){
+                        that.productList = res.data
+                    }
+                })
+            },
+            getAllCondiment(){
+                let that = this
+                axios({
+                    method: "get",
+                    url: "getAllCondiment",
+                }).then((res)=>{
+                        if(res.data){
+                        that.comdimentList = res.data
+                        }
+                })
+            },
+            showPay(productId,productName,productPrice){
+                let that = this
+                that.dilogObj.productId=productId
+                that.dilogObj.productName=productName
+                that.dilogObj.productPrice=productPrice
+                that.dilogObj.countPrice=that.dilogObj.productPrice+that.dilogObj.comdimentPrice
+                console.log(productId,productName,productPrice)
+            },
+            countPrice(condimentName,condimentPrice){
+                // let that = this
+                // if (that.comdimentNameObj[condimentName]=="undefined"||that.comdimentNameObj[condimentName]==0){
+                //     that.comdimentNameList[condimentName] = 1;
+                // }else {
+                //     that.comdimentNameList[condimentName] = 0;
+                // }
+                // console.log(that.comdimentNameList)
+
+            }
+        },
+        mounted(){
+            this.selectAllAddress();
+            //获取所有商品
+            this.getAllProduct()
+            this.getAllCondiment()
+        },
+        watch:{
+            comdimenPrices:{
+                immediate:true,
+                handler(newValue){
+                    this.dilogObj.countPrice = Number.parseFloat(this.dilogObj.productPrice)
+                    for (const newValueElement of newValue) {
+                      this.dilogObj.countPrice +=Number.parseFloat(newValueElement)
+                }
+                    console.log(this.dilogObj.countPrice, this.dilogObj.comdimentName)
+            }
+        }}
+    })
+</script>
+</body>
+</html>

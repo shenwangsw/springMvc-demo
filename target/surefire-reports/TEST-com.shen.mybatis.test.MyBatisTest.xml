@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="2" failures="0" name="com.shen.mybatis.test.MyBatisTest" time="0.411" errors="2" skipped="0">
+  <properties>
+    <property name="idea.version" value="2021.1"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\bin"/>
+    <property name="java.vm.version" value="25.202-b08"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\javaPrise\springMvc-demo"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="E:\javaPrise\springMvc-demo"/>
+    <property name="java.runtime.version" value="1.8.0_202-b08"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\84478\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="maven.ext.class.path" value="D:\Program Files\JetBrains\IntelliJ IDEA 2021.1\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="D:\apache-maven-3.6.3\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_202\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;D:\downLoads\mysql-5.7.35-winx64\bin;;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;D:\anaconda3;D:\anaconda3\Library\mingw-w64\bin;D:\anaconda3\Library\usr\bin;D:\anaconda3\Library\bin;D:\anaconda3\Scripts;C:\Users\84478\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\84478\AppData\Local\Programs\Python\Python310\;C:\Users\84478\AppData\Local\Microsoft\WindowsApps;D:\data\Microsoft VS Code\bin;C:\Users\84478\AppData\Roaming\npm;C:\Program Files\Azure Data Studio\bin;C:\Program Files\Java\jdk1.8.0_202\bin;D:\Program Files\JetBrains\PyCharm 2022.1.2\bin;;."/>
+    <property name="maven.conf" value="D:\apache-maven-3.6.3/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\84478"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="84478"/>
+    <property name="java.class.path" value="D:\apache-maven-3.6.3\boot\plexus-classworlds-2.6.0.jar;D:\apache-maven-3.6.3\boot\plexus-classworlds.license;D:\Program Files\JetBrains\IntelliJ IDEA 2021.1\lib\idea_rt.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_202\jre"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2021.1 -s D:\apache-maven-3.6.3\conf\settings.xml package"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_202"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_202\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\apache-maven-3.6.3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.shen.mybatis.test.MyBatisTest" name="testMyBatis1" time="0.352">
+    <error message="
+### Error opening session.  Cause: java.lang.NullPointerException
+### Cause: java.lang.NullPointerException" type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error opening session.  Cause: java.lang.NullPointerException
+### Cause: java.lang.NullPointerException
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSessionFromDataSource(DefaultSqlSessionFactory.java:100)
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSession(DefaultSqlSessionFactory.java:52)
+	at com.shen.mybatis.test.MyBatisTest.testMyBatis1(MyBatisTest.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.NullPointerException
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSessionFromDataSource(DefaultSqlSessionFactory.java:95)
+	... 34 more
+</error>
+    <system-out>23:23:10.637 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using &apos;class org.apache.ibatis.logging.slf4j.Slf4jImpl&apos; adapter.
+23:23:10.642 [main] DEBUG org.apache.ibatis.io.VFS - Class not found: org.jboss.vfs.VFS
+23:23:10.642 [main] DEBUG org.apache.ibatis.io.JBoss6VFS - JBoss 6 VFS API is not available in this environment.
+23:23:10.642 [main] DEBUG org.apache.ibatis.io.VFS - Class not found: org.jboss.vfs.VirtualFile
+23:23:10.642 [main] DEBUG org.apache.ibatis.io.VFS - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+23:23:10.643 [main] DEBUG org.apache.ibatis.io.VFS - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+23:23:10.643 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo
+23:23:10.643 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo
+23:23:10.666 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: AddressUserTab.class
+23:23:10.666 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: Adress.class
+23:23:10.666 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: Condiment.class
+23:23:10.666 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: Order.class
+23:23:10.666 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: Product.class
+23:23:10.667 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: User.class
+23:23:10.667 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Listing file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo
+23:23:10.667 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/AddressUserTab.class
+23:23:10.667 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/AddressUserTab.class
+23:23:10.668 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;O	&amp;#0;&amp;#4;&amp;#0;:	&amp;#0;&amp;#4;&amp;#0;;	&amp;#0;&amp;#4;&amp;#0;&lt;&amp;#7;&amp;#0;=
+23:23:10.668 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/Adress.class
+23:23:10.668 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/Adress.class
+23:23:10.669 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;h	&amp;#0;&amp;#5;&amp;#0;N	&amp;#0;&amp;#5;&amp;#0;O	&amp;#0;&amp;#5;&amp;#0;P	&amp;#0;&amp;#5;&amp;#0;Q&amp;#7;&amp;#0;R
+23:23:10.669 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/Condiment.class
+23:23:10.669 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/Condiment.class
+23:23:10.669 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;h	&amp;#0;&amp;#4;&amp;#0;I	&amp;#0;&amp;#4;&amp;#0;J	&amp;#0;&amp;#4;&amp;#0;K&amp;#7;&amp;#0;L
+23:23:10.670 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/Order.class
+23:23:10.670 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/Order.class
+23:23:10.670 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;~	&amp;#0;&amp;#5;&amp;#0;X	&amp;#0;&amp;#5;&amp;#0;Y	&amp;#0;&amp;#5;&amp;#0;Z	&amp;#0;&amp;#5;&amp;#0;[&amp;#7;&amp;#0;\
+23:23:10.670 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/Product.class
+23:23:10.671 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/Product.class
+23:23:10.671 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;t	&amp;#0;&amp;#6;&amp;#0;W	&amp;#0;&amp;#6;&amp;#0;X	&amp;#0;&amp;#6;&amp;#0;Y	&amp;#0;&amp;#6;&amp;#0;Z	&amp;#0;&amp;#6;&amp;#0;[&amp;#7;&amp;#0;\
+23:23:10.672 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/User.class
+23:23:10.672 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/User.class
+23:23:10.673 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;?	&amp;#0;&amp;#6;&amp;#0;a	&amp;#0;&amp;#6;&amp;#0;b	&amp;#0;&amp;#6;&amp;#0;c	&amp;#0;&amp;#6;&amp;#0;d	&amp;#0;&amp;#6;&amp;#0;e&amp;#7;&amp;#0;f
+23:23:10.673 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.pojo.AddressUserTab matches criteria [is assignable to Object]
+23:23:10.674 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.pojo.Adress matches criteria [is assignable to Object]
+23:23:10.674 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.pojo.Condiment matches criteria [is assignable to Object]
+23:23:10.674 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.pojo.Order matches criteria [is assignable to Object]
+23:23:10.675 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.pojo.Product matches criteria [is assignable to Object]
+23:23:10.675 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.pojo.User matches criteria [is assignable to Object]
+23:23:10.678 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper
+23:23:10.678 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper
+23:23:10.679 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: AddressMapper.class
+23:23:10.679 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: AddressMapper.xml
+23:23:10.679 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: AddressUserTabMapper.class
+23:23:10.679 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: AddressUserTabMapper.xml
+23:23:10.680 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: CondimentMapper.class
+23:23:10.680 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: CondimentMapper.xml
+23:23:10.680 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: OrderMapper.class
+23:23:10.680 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: OrderMapper.xml
+23:23:10.680 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ProductMapper.class
+23:23:10.680 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ProductMapper.xml
+23:23:10.680 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: UserMapper.class
+23:23:10.680 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: UserMapper.xml
+23:23:10.681 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Listing file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper
+23:23:10.681 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/AddressMapper.class
+23:23:10.681 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/AddressMapper.class
+23:23:10.681 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;&amp;#25;&amp;#7;&amp;#0;&amp;#23;&amp;#7;&amp;#0;&amp;#24;&amp;#1;&amp;#0;
+23:23:10.681 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/AddressMapper.xml
+23:23:10.681 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/AddressMapper.xml
+23:23:10.681 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+23:23:10.682 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/AddressUserTabMapper.class
+23:23:10.682 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/AddressUserTabMapper.class
+23:23:10.682 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;&amp;#17;&amp;#7;&amp;#0;&amp;#15;&amp;#7;&amp;#0;&amp;#16;&amp;#1;&amp;#0;&amp;#17;insertAddressUser&amp;#1;&amp;#0;&amp;#5;(II)I&amp;#1;&amp;#0;&quot;RuntimeVisibleParameterAnnotations&amp;#1;&amp;#0;%Lorg/apache/ibatis/annotations/Param;&amp;#1;&amp;#0;&amp;#5;value&amp;#1;&amp;#0;	addressId&amp;#1;&amp;#0;&amp;#6;userId&amp;#1;&amp;#0;&amp;#17;deleteAddressUser&amp;#1;&amp;#0;
+23:23:10.683 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/AddressUserTabMapper.xml
+23:23:10.683 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/AddressUserTabMapper.xml
+23:23:10.683 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+23:23:10.683 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/CondimentMapper.class
+23:23:10.683 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/CondimentMapper.class
+23:23:10.684 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;&amp;#20;&amp;#7;&amp;#0;&amp;#18;&amp;#7;&amp;#0;&amp;#19;&amp;#1;&amp;#0;&amp;#15;insertCondiment&amp;#1;&amp;#0;+(Lcom/shen/mvc/controller/pojo/Condiment;)I&amp;#1;&amp;#0;&amp;#19;selectCondimentById&amp;#1;&amp;#0;&amp;#25;(I)Ljava/lang/Comparable;&amp;#1;&amp;#0;&amp;#18;selectAllCondiment&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;&lt;()Ljava/util/List&lt;Lcom/shen/mvc/controller/pojo/Condiment;&gt;;&amp;#1;&amp;#0;&amp;#15;upDateCondiment&amp;#1;&amp;#0;&amp;#4;(I)I&amp;#1;&amp;#0;&amp;#15;deleteCondiment&amp;#1;&amp;#0;
+23:23:10.684 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/CondimentMapper.xml
+23:23:10.684 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/CondimentMapper.xml
+23:23:10.684 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+23:23:10.685 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/OrderMapper.class
+23:23:10.685 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/OrderMapper.class
+23:23:10.685 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;&amp;#25;&amp;#7;&amp;#0;&amp;#23;&amp;#7;&amp;#0;&amp;#24;&amp;#1;&amp;#0;&amp;#11;insertOrder&amp;#1;&amp;#0;&apos;(Lcom/shen/mvc/controller/pojo/Order;)I&amp;#1;&amp;#0;&amp;#15;selectOrderById&amp;#1;&amp;#0;&apos;(I)Lcom/shen/mvc/controller/pojo/Order;&amp;#1;&amp;#0;&quot;RuntimeVisibleParameterAnnotations&amp;#1;&amp;#0;%Lorg/apache/ibatis/annotations/Param;&amp;#1;&amp;#0;&amp;#5;value&amp;#1;&amp;#0;&amp;#7;orderId&amp;#1;&amp;#0;&amp;#14;selectAllOrder&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;8()Ljava/util/List&lt;Lcom/shen/mvc/controller/pojo/Order;&gt;;&amp;#1;&amp;#0;&amp;#11;upDateOrder&amp;#1;&amp;#0;((Lcom/shen/mvc/controller/pojo/Order;I)I&amp;#1;&amp;#0;&amp;#11;deleteOrder&amp;#1;&amp;#0;&amp;#4;(I)I&amp;#1;&amp;#0;
+23:23:10.685 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/OrderMapper.xml
+23:23:10.685 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/OrderMapper.xml
+23:23:10.685 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+23:23:10.685 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/ProductMapper.class
+23:23:10.685 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/ProductMapper.class
+23:23:10.685 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;&amp;#20;&amp;#7;&amp;#0;&amp;#18;&amp;#7;&amp;#0;&amp;#19;&amp;#1;&amp;#0;
+23:23:10.685 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/ProductMapper.xml
+23:23:10.685 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/ProductMapper.xml
+23:23:10.686 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+23:23:10.686 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/UserMapper.class
+23:23:10.686 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/UserMapper.class
+23:23:10.686 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;&amp;#21;&amp;#7;&amp;#0;&amp;#19;&amp;#7;&amp;#0;&amp;#20;&amp;#1;&amp;#0;
+23:23:10.687 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/UserMapper.xml
+23:23:10.687 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/UserMapper.xml
+23:23:10.687 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+23:23:10.687 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.mapper.AddressMapper matches criteria [is assignable to Object]
+23:23:10.687 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.mapper.AddressUserTabMapper matches criteria [is assignable to Object]
+23:23:10.688 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.mapper.CondimentMapper matches criteria [is assignable to Object]
+23:23:10.688 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.mapper.OrderMapper matches criteria [is assignable to Object]
+23:23:10.688 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.mapper.ProductMapper matches criteria [is assignable to Object]
+23:23:10.688 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.mapper.UserMapper matches criteria [is assignable to Object]
+</system-out>
+  </testcase>
+  <testcase classname="com.shen.mybatis.test.MyBatisTest" name="testMyBatis" time="0.059">
+    <error message="
+### Error opening session.  Cause: java.lang.NullPointerException
+### Cause: java.lang.NullPointerException" type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error opening session.  Cause: java.lang.NullPointerException
+### Cause: java.lang.NullPointerException
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSessionFromDataSource(DefaultSqlSessionFactory.java:100)
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSession(DefaultSqlSessionFactory.java:52)
+	at com.shen.mybatis.test.MyBatisTest.testMyBatis(MyBatisTest.java:24)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.NullPointerException
+	at org.apache.ibatis.session.defaults.DefaultSqlSessionFactory.openSessionFromDataSource(DefaultSqlSessionFactory.java:95)
+	... 34 more
+</error>
+    <system-out>23:23:10.794 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo
+23:23:10.794 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo
+23:23:10.795 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: AddressUserTab.class
+23:23:10.795 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: Adress.class
+23:23:10.795 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: Condiment.class
+23:23:10.795 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: Order.class
+23:23:10.795 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: Product.class
+23:23:10.795 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: User.class
+23:23:10.795 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Listing file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo
+23:23:10.795 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/AddressUserTab.class
+23:23:10.796 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/AddressUserTab.class
+23:23:10.796 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;O	&amp;#0;&amp;#4;&amp;#0;:	&amp;#0;&amp;#4;&amp;#0;;	&amp;#0;&amp;#4;&amp;#0;&lt;&amp;#7;&amp;#0;=
+23:23:10.796 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/Adress.class
+23:23:10.796 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/Adress.class
+23:23:10.796 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;h	&amp;#0;&amp;#5;&amp;#0;N	&amp;#0;&amp;#5;&amp;#0;O	&amp;#0;&amp;#5;&amp;#0;P	&amp;#0;&amp;#5;&amp;#0;Q&amp;#7;&amp;#0;R
+23:23:10.796 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/Condiment.class
+23:23:10.797 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/Condiment.class
+23:23:10.797 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;h	&amp;#0;&amp;#4;&amp;#0;I	&amp;#0;&amp;#4;&amp;#0;J	&amp;#0;&amp;#4;&amp;#0;K&amp;#7;&amp;#0;L
+23:23:10.797 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/Order.class
+23:23:10.797 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/Order.class
+23:23:10.797 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;~	&amp;#0;&amp;#5;&amp;#0;X	&amp;#0;&amp;#5;&amp;#0;Y	&amp;#0;&amp;#5;&amp;#0;Z	&amp;#0;&amp;#5;&amp;#0;[&amp;#7;&amp;#0;\
+23:23:10.797 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/Product.class
+23:23:10.797 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/Product.class
+23:23:10.798 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;t	&amp;#0;&amp;#6;&amp;#0;W	&amp;#0;&amp;#6;&amp;#0;X	&amp;#0;&amp;#6;&amp;#0;Y	&amp;#0;&amp;#6;&amp;#0;Z	&amp;#0;&amp;#6;&amp;#0;[&amp;#7;&amp;#0;\
+23:23:10.798 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/User.class
+23:23:10.798 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/pojo/User.class
+23:23:10.798 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;?	&amp;#0;&amp;#6;&amp;#0;a	&amp;#0;&amp;#6;&amp;#0;b	&amp;#0;&amp;#6;&amp;#0;c	&amp;#0;&amp;#6;&amp;#0;d	&amp;#0;&amp;#6;&amp;#0;e&amp;#7;&amp;#0;f
+23:23:10.798 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.pojo.AddressUserTab matches criteria [is assignable to Object]
+23:23:10.798 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.pojo.Adress matches criteria [is assignable to Object]
+23:23:10.798 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.pojo.Condiment matches criteria [is assignable to Object]
+23:23:10.798 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.pojo.Order matches criteria [is assignable to Object]
+23:23:10.799 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.pojo.Product matches criteria [is assignable to Object]
+23:23:10.799 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.pojo.User matches criteria [is assignable to Object]
+23:23:10.801 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper
+23:23:10.801 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper
+23:23:10.801 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: AddressMapper.class
+23:23:10.802 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: AddressMapper.xml
+23:23:10.802 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: AddressUserTabMapper.class
+23:23:10.802 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: AddressUserTabMapper.xml
+23:23:10.802 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: CondimentMapper.class
+23:23:10.802 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: CondimentMapper.xml
+23:23:10.802 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: OrderMapper.class
+23:23:10.802 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: OrderMapper.xml
+23:23:10.802 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ProductMapper.class
+23:23:10.802 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ProductMapper.xml
+23:23:10.802 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: UserMapper.class
+23:23:10.803 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: UserMapper.xml
+23:23:10.803 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Listing file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper
+23:23:10.803 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/AddressMapper.class
+23:23:10.803 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/AddressMapper.class
+23:23:10.803 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;&amp;#25;&amp;#7;&amp;#0;&amp;#23;&amp;#7;&amp;#0;&amp;#24;&amp;#1;&amp;#0;
+23:23:10.803 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/AddressMapper.xml
+23:23:10.803 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/AddressMapper.xml
+23:23:10.803 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+23:23:10.804 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/AddressUserTabMapper.class
+23:23:10.804 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/AddressUserTabMapper.class
+23:23:10.804 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;&amp;#17;&amp;#7;&amp;#0;&amp;#15;&amp;#7;&amp;#0;&amp;#16;&amp;#1;&amp;#0;&amp;#17;insertAddressUser&amp;#1;&amp;#0;&amp;#5;(II)I&amp;#1;&amp;#0;&quot;RuntimeVisibleParameterAnnotations&amp;#1;&amp;#0;%Lorg/apache/ibatis/annotations/Param;&amp;#1;&amp;#0;&amp;#5;value&amp;#1;&amp;#0;	addressId&amp;#1;&amp;#0;&amp;#6;userId&amp;#1;&amp;#0;&amp;#17;deleteAddressUser&amp;#1;&amp;#0;
+23:23:10.804 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/AddressUserTabMapper.xml
+23:23:10.804 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/AddressUserTabMapper.xml
+23:23:10.804 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+23:23:10.804 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/CondimentMapper.class
+23:23:10.805 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/CondimentMapper.class
+23:23:10.805 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;&amp;#20;&amp;#7;&amp;#0;&amp;#18;&amp;#7;&amp;#0;&amp;#19;&amp;#1;&amp;#0;&amp;#15;insertCondiment&amp;#1;&amp;#0;+(Lcom/shen/mvc/controller/pojo/Condiment;)I&amp;#1;&amp;#0;&amp;#19;selectCondimentById&amp;#1;&amp;#0;&amp;#25;(I)Ljava/lang/Comparable;&amp;#1;&amp;#0;&amp;#18;selectAllCondiment&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;&lt;()Ljava/util/List&lt;Lcom/shen/mvc/controller/pojo/Condiment;&gt;;&amp;#1;&amp;#0;&amp;#15;upDateCondiment&amp;#1;&amp;#0;&amp;#4;(I)I&amp;#1;&amp;#0;&amp;#15;deleteCondiment&amp;#1;&amp;#0;
+23:23:10.805 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/CondimentMapper.xml
+23:23:10.805 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/CondimentMapper.xml
+23:23:10.805 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+23:23:10.806 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/OrderMapper.class
+23:23:10.806 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/OrderMapper.class
+23:23:10.806 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;&amp;#25;&amp;#7;&amp;#0;&amp;#23;&amp;#7;&amp;#0;&amp;#24;&amp;#1;&amp;#0;&amp;#11;insertOrder&amp;#1;&amp;#0;&apos;(Lcom/shen/mvc/controller/pojo/Order;)I&amp;#1;&amp;#0;&amp;#15;selectOrderById&amp;#1;&amp;#0;&apos;(I)Lcom/shen/mvc/controller/pojo/Order;&amp;#1;&amp;#0;&quot;RuntimeVisibleParameterAnnotations&amp;#1;&amp;#0;%Lorg/apache/ibatis/annotations/Param;&amp;#1;&amp;#0;&amp;#5;value&amp;#1;&amp;#0;&amp;#7;orderId&amp;#1;&amp;#0;&amp;#14;selectAllOrder&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;8()Ljava/util/List&lt;Lcom/shen/mvc/controller/pojo/Order;&gt;;&amp;#1;&amp;#0;&amp;#11;upDateOrder&amp;#1;&amp;#0;((Lcom/shen/mvc/controller/pojo/Order;I)I&amp;#1;&amp;#0;&amp;#11;deleteOrder&amp;#1;&amp;#0;&amp;#4;(I)I&amp;#1;&amp;#0;
+23:23:10.806 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/OrderMapper.xml
+23:23:10.806 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/OrderMapper.xml
+23:23:10.807 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+23:23:10.807 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/ProductMapper.class
+23:23:10.807 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/ProductMapper.class
+23:23:10.807 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;&amp;#20;&amp;#7;&amp;#0;&amp;#18;&amp;#7;&amp;#0;&amp;#19;&amp;#1;&amp;#0;
+23:23:10.807 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/ProductMapper.xml
+23:23:10.807 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/ProductMapper.xml
+23:23:10.807 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+23:23:10.808 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/UserMapper.class
+23:23:10.808 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/UserMapper.class
+23:23:10.808 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: ����&amp;#0;&amp;#0;&amp;#0;2&amp;#0;&amp;#21;&amp;#7;&amp;#0;&amp;#19;&amp;#7;&amp;#0;&amp;#20;&amp;#1;&amp;#0;
+23:23:10.808 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Find JAR URL: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/UserMapper.xml
+23:23:10.808 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Not a JAR: file:/E:/javaPrise/springMvc-demo/target/classes/com/shen/mvc/controller/mapper/UserMapper.xml
+23:23:10.808 [main] DEBUG org.apache.ibatis.io.DefaultVFS - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+23:23:10.809 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.mapper.AddressMapper matches criteria [is assignable to Object]
+23:23:10.809 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.mapper.AddressUserTabMapper matches criteria [is assignable to Object]
+23:23:10.809 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.mapper.CondimentMapper matches criteria [is assignable to Object]
+23:23:10.809 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.mapper.OrderMapper matches criteria [is assignable to Object]
+23:23:10.809 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.mapper.ProductMapper matches criteria [is assignable to Object]
+23:23:10.809 [main] DEBUG org.apache.ibatis.io.ResolverUtil - Checking to see if class com.shen.mvc.controller.mapper.UserMapper matches criteria [is assignable to Object]
+</system-out>
+  </testcase>
+</testsuite>

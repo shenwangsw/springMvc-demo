@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shen.mvc.controller.mapper.AddressMapper">
+<!--    //增删改查-->
+    <!--    //增加地址-->
+    <!--    int insertAddress(Adress adress);-->
+
+<!--    <selectKey resultType="int" order ="AFTER" keyProperty="addressId">-->
+<!--        select LAST_INSERT_ID()-->
+<!--    </selectKey>-->
+    <insert id="insertAddress" useGeneratedKeys="true" keyProperty="addressId">
+        insert into address values (null,#{consignee},#{phone},#{addressText})
+    </insert>
+    <!--    //查询所有地址-->
+    <!--    List<Adress> selectAllAddress();-->
+    <select id="selectAllAddress" resultType="Adress">
+        select * from address
+    </select>
+
+    <resultMap id = "userAndAddressMap" type="user">
+        <id property="userId" column="userId"></id>
+        <result property="userName" column="userName"></result>
+        <result property="userPassword" column="userPassword"></result>
+        <result property="userEmail" column="userEmail"></result>
+        <collection property="adressList" ofType="Adress">
+            <id property="addressId" column="addressId"></id>
+            <result property="consignee" column="consignee"></result>
+            <result property="phone" column="phone"></result>
+            <result property="addressText" column="addressText"></result>
+        </collection>
+    </resultMap>
+    <!--    //根据Id查询地址-->
+    <!--    int selectAddressById(int id);-->
+    <select id="selectAddressById" resultMap="userAndAddressMap">
+    select c.userId,c.userName,c.userPassword,c.userEmail, b.addressId,b.consignee,b.phone,b.addressText from user as c
+    LEFT JOIN addressusertab as a on
+    c.userId = a.userId left join address as b on a.addressId = b.addressId  where a.userId = #{userId}
+    </select>
+    <!--    //根据id删除地址-->
+    <!--    int deleteAddress(int id);-->
+    <delete id="deleteAddress">
+        delete from address where addressId = #{addressId}
+    </delete>
+
+<!--    <update id="upDateAddress">-->
+    <update id="upDateAddress">
+        update address set
+        <trim suffix="where" suffixOverrides=",">
+        <if test="consignee != null and consignee !=''">
+            consignee = #{consignee} ,
+        </if>
+        <if test="phone != null and phone !=''">
+             phone = #{phone} ,
+        </if>
+        <if test="addressText != null and addressText !=''">
+             addressText = #{addressText}
+        </if>
+        </trim>
+        addressId = #{addressId}
+    </update>
+</mapper>

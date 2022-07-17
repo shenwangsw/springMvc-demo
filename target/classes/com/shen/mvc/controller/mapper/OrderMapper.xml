@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shen.mvc.controller.mapper.OrderMapper">
+<!--    //增删改查-->
+
+
+
+<!--    //根据产品id修改订单-->
+<!--    int upDateOrder(Order order, @Param("orderId")int id);-->
+    <!--    //增加订单-->
+    <!--    int insertOrder(Order order);-->
+    <insert id="insertOrder" >
+        insert into orders values (null,#{orderPrice},#{orderTime},#{orderInfo})
+    </insert>
+
+    <!--    //查询所有订单-->
+    <!--    List<Order> selectAllOrder();-->
+    <select id="selectAllOrder" resultType="Order">
+        select * from orders
+    </select>
+    <!--    //根据Id查询订单-->
+    <!--    int selectOrderById(@Param("orderId") int id);-->
+    <select id="selectOrderById" resultType="Order">
+        select * from orders where orderId =#{orderId}
+    </select>
+    <!--    //根据id删除订单-->
+    <!--    int deleteOrder(@Param("orderId")int id);-->
+    <delete id="deleteAddress">
+        delete from orders where orderId = #{orderId}
+    </delete>
+</mapper>
